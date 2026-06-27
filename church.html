@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description"
+  content="Cherish Chapel Worldwide is a Christ-centered church in Macarthy Hill dedicated to worship, prayer, biblical teaching, and spiritual growth."/>
+
+  <title>Cherish Chapel Worldwide</title>
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+
+    :root{
+      --primary:#79180d;
+      --secondary:#0c2092;
+      --dark:#111;
+      --light:#ffffff;
+      --gray:#cccccc;
+      --section-padding:100px 7%;
+    }
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      background:var(--dark);
+      color:white;
+      overflow-x:hidden;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    /* TOP BAR */
+
+    .top-bar{
+      width: 100%;
+      background:#fff;
+      color:#8f0404;
+      padding:10px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-wrap:wrap;
+      gap:10px;
+      font-size:13px;
+    }
+
+    .top-left,
+    .top-right{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    /* HEADER */
+
+    header{
+      width:100%;
+      background:var(--secondary);
+      padding:12px 7%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 10px rgba(0,0,0,0.3);
+    }
+
+    /* LOGO */
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      text-decoration:none;
+      color:white;
+    }
+
+    .logo img{
+      width:55px;
+      height:55px;
+      object-fit:cover;
+    }
+
+    .logo-text{
+      font-size:22px;
+      font-weight:600;
+      line-height:1.1;
+      font-family:Georgia, serif;
+    }
+
+    /* NAVIGATION */
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:30px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:white;
+      font-weight:500;
+      position:relative;
+      transition:0.3s;
+    }
+
+    nav ul li a::after{
+      content:'';
+      width:0;
+      height:2px;
+      background:var(--primary);
+      position:absolute;
+      left:0;
+      bottom:-6px;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#ff6a55;
+    }
+
+    nav ul li a:hover::after{
+      width:100%;
+    }
+
+    /* MOBILE MENU */
+
+    .menu-toggle{
+      display:none;
+      font-size:28px;
+      color:white;
+      cursor:pointer;
+    }
+
+    /* BUTTON */
+
+    .contact-btn,
+    .btn-primary{
+      background:var(--primary);
+      color:white;
+      padding:14px 30px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .contact-btn:hover,
+    .btn-primary:hover{
+      background:#ff6a55;
+      transform:translateY(-2px);
+    }
+
+    .btn-outline{
+      border:2px solid white;
+      color:white;
+      padding:13px 30px;
+      border-radius:40px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+      display:inline-block;
+    }
+
+    .btn-outline:hover{
+      background:white;
+      color:#111;
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:90vh;
+      position:relative;
+      display:flex;
+      align-items:center;
+      padding:100px 7%;
+      overflow:hidden;
+    }
+
+    .hero::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:url("two.jpeg") center/cover no-repeat;
+      animation:zoomEffect 15s ease-in-out infinite alternate;
+      z-index:-2;
+    }
+
+    .hero::after{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.7);
+      z-index:-1;
+    }
+
+    @keyframes zoomEffect{
+      from{
+        transform:scale(1);
+      }
+
+      to{
+        transform:scale(1.1);
+      }
+    }
+
+    .hero-content{
+      max-width:750px;
+      z-index:2;
+      animation:fadeIn 1s ease;
+    }
+
+    .hero h1{
+      font-size:68px;
+      line-height:1.1;
+      margin-bottom:25px;
+      font-family:Georgia, serif;
+      letter-spacing:-1px;
+    }
+
+    .hero p{
+      color:#ddd;
+      font-size:18px;
+      line-height:1.8;
+      margin-bottom:40px;
+      max-width:600px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    /* SECTION */
+
+    section{
+      padding:var(--section-padding);
+    }
+
+    .section-tag{
+      display:inline-block;
+      padding:10px 22px;
+      border-radius:40px;
+      background:rgba(121,24,13,0.15);
+      border:1px solid rgba(240,79,61,0.3);
+      color:#f04f3d;
+      font-size:13px;
+      font-weight:600;
+      margin-bottom:25px;
+    }
+
+    /* ABOUT */
+
+    .about-section{
+      background:#151515;
+    }
+
+    .about-container{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:70px;
+      flex-wrap:wrap;
+    }
+
+    .about-image,
+    .about-content{
+      flex:1;
+      min-width:300px;
+    }
+
+    .about-image img{
+      border-radius:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    }
+
+    .about-content h2{
+      font-size:48px;
+      line-height:1.2;
+      margin-bottom:25px;
+      font-family:Georgia, serif;
+    }
+
+    .about-content p{
+      color:var(--gray);
+      line-height:1.9;
+      margin-bottom:20px;
+      max-width:650px;
+    }
+
+    /* MISSION */
+
+    .mission-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+      margin-top:50px;
+    }
+
+    .mission-box{
+      background:#1f1f1f;
+      padding:30px;
+      border-radius:18px;
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.3s;
+    }
+
+    .mission-box:hover{
+      transform:translateY(-5px);
+      box-shadow:0 15px 35px rgba(240,79,61,0.2);
+    }
+
+    .mission-box h3{
+      color:#f04f3d;
+      margin-bottom:15px;
+    }
+
+    .mission-box p{
+      color:#ccc;
+      font-size:15px;
+      line-height:1.8;
+    }
+
+    /* GALLERY */
+
+    .gallery-section{
+      background:#101010;
+    }
+
+    .gallery-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .gallery-title h2{
+      font-size:45px;
+      font-family:Georgia, serif;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+
+    .gallery-grid img{
+      height:300px;
+      width:100%;
+      object-fit:cover;
+      border-radius:16px;
+      transition:0.4s;
+    }
+
+    .gallery-grid img:hover{
+      transform:scale(1.03);
+    }
+
+    /* SERMONS */
+
+    .sermons-section{
+      background:#151515;
+    }
+
+    .sermons-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .sermons-title h2{
+      font-size:45px;
+      font-family:Georgia, serif;
+    }
+
+    .sermon-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:25px;
+    }
+
+    .sermon-card{
+      background:#1f1f1f;
+      border-radius:20px;
+      overflow:hidden;
+      transition:0.3s;
+    }
+
+    .sermon-card:hover{
+      transform:translateY(-5px);
+    }
+
+    .sermon-card img{
+      height:400px;
+      width:100%;
+      object-fit:cover;
+    }
+
+    .sermon-content{
+      padding:25px;
+    }
+
+    .sermon-content h3{
+      margin-bottom:10px;
+    }
+
+    .sermon-content p{
+      color:#ccc;
+      font-size:14px;
+      margin-bottom:20px;
+    }
+
+    /* FOOTER */
+
+    .footer{
+      background:#0b0b0b;
+      text-align:center;
+      padding:60px 20px;
+      color:#aaa;
+    }
+
+    .footer h3{
+      color:white;
+      margin-bottom:15px;
+      font-size:28px;
+      font-family:Georgia, serif;
+    }
+
+    .social-icons{
+      margin:25px 0;
+      display:flex;
+      justify-content:center;
+      gap:20px;
+    }
+
+    .social-icons a{
+      color:white;
+      font-size:18px;
+      transition:0.3s;
+    }
+
+    .social-icons a:hover{
+      color:#ffffff;
+    }
+
+    /* REVEAL ANIMATION */
+
+    .reveal{
+      opacity:0;
+      transform:translateY(40px);
+      transition:1s;
+    }
+
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    /* FADE */
+
+    @keyframes fadeIn{
+      from{
+        opacity:0;
+        transform:translateY(30px);
+      }
+
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:1100px){
+
+      .menu-toggle{
+        display:block;
+      }
+
+      nav{
+        display:none;
+        width:100%;
+      }
+
+      nav.active{
+        display:block;
+      }
+
+      nav ul{
+        flex-direction:column;
+        padding-top:20px;
+      }
+
+      .contact-btn{
+        display:none;
+      }
+
+      header{
+        flex-wrap:wrap;
+      }
+
+      .hero h1{
+        font-size:52px;
+      }
+    }
+
+    @media(max-width:768px){
+
+      .top-bar{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+
+      .hero{
+        padding:80px 7%;
+      }
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero-buttons{
+        flex-direction:column;
+        width:100%;
+      }
+
+      .btn-primary,
+      .btn-outline{
+        width:100%;
+        text-align:center;
+      }
+
+      .about-content h2,
+      .gallery-title h2,
+      .sermons-title h2{
+        font-size:34px;
+      }
+    }
+    /* CONTACT / SOCIAL SECTION */
+.contact-social-section{
+    position: relative;
+    background: url('four.jpeg') center/cover no-repeat;
+    padding: 80px 10%;
+    color: rgb(255, 255, 255);
+    overflow: hidden;
+}
+
+.contact-social-section .overlay{
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+}
+
+.contact-container{
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-info,
+.social-media{
+    flex: 1;
+    min-width: 280px;
+}
+
+.contact-info h3,
+.social-media h3{
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.info-box{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.info-box i{
+    font-size: 20px;
+    color: #ce3131;
+}
+
+.info-box p{
+    margin: 0;
+    font-size: 17px;
+}
+
+.social-icons{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.social-icons a{
+    width: 60px;
+    height: 60px;
+    border: 2px solid #ce3131;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 24px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover{
+    background: #ce3131;
+    color: #ffffff;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .social-icons{
+        flex-wrap: wrap;
+    }
+}
+/* WATCH SECTION */
+.watch-section{
+    background: #0e0d0d;
+    padding: 70px 5%;
+    font-family: Georgia, serif;
+}
+
+.watch-header{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.watch-header h1{
+    margin-bottom: 15px;
+    color: #ff3b1f;
+    border: 1px solid #5a1a12;
+    padding: 14px 10px;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.watch-header p{
+    max-width: 700px;
+    margin: auto;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+.watch-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+/* GRID (parent container holding both cards) */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+
+/* CARD */
+.card {
+  background: #ffffff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0,0,0,0.2);
+}
+
+/* IMAGE CONTAINER */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* IFRAME CONTAINER */
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  overflow: hidden;
+}
+
+/* IFRAME */
+.video-wrapper iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* LIVE BADGE */
+.live-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* CONTENT */
+.card-content {
+  padding: 16px 18px;
+}
+
+/* TEXT */
+.card-title {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.tag {
+  display: inline-block;
+  background: #ce3131;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.card-date {
+  font-size: 12px;
+  color: #999;
+  margin-top: 8px;
+}
+/* OPTIONAL: SMOOTH TEXT RENDER */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/* HOVER EFFECT */
+.video-card img{
+    transition: 0.4s ease;
+}
+
+.video-card:hover img{
+    transform: scale(1.02);
+}
+
+/* TOP TICKER BAR */
+.top-ticker {
+  width: 100%;
+  background: purple; /* change to your color */
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  padding: 10px 60px;
+  position: fixed;
+  top: 60;
+  z-index: 9999;
+}
+
+/* MOVING TEXT */
+.ticker-track {
+  display: inline-block;
+  padding-left: 100%;
+  animation: scrollText 50s linear infinite;
+}
+
+/* TEXT STYLE */
+.ticker-track p {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* ANIMATION */
+@keyframes scrollText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width: 900px){
+
+    .watch-container{
+        grid-template-columns: 1fr;
+    }
+
+    .watch-header h1{
+        font-size: 50px;
+    }
+
+    .video-card img{
+        height: auto;
+    }
+}
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+
+  <header>
+
+    <a href="#home" class="logo">
+
+      <img src="logo.png" alt="Church Logo">
+
+      <div class="logo-text">
+        Cherish Chapel Worldwide
+      </div>
+
+    </a>
+
+    <!-- MOBILE MENU -->
+
+    <div class="menu-toggle" aria-label="Open Menu">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#sermons">Sermons</a></li>
+        <li><a href="#watch">watch</a></li>
+        <li><a href="#footer">Contact</a></li>
+        
+      </ul>
+
+    </nav>
+
+    <a href="#footer" class="contact-btn">
+      Contact Us
+    </a>
+    
+
+  </header>
+  <div class="top-ticker">
+  <div class="ticker-track">
+    <p>
+      Time with General Richard Darko on Original TV and Original FM every Monday And Thursday @9pm Prompt •
+      Join us live this Sunday on all social media platforms @richarddarkoministries • 
+      Worship | Word | Healing •
+      Everyone is welcomed
+    </p>
+  </div>
+</div>
+
+  <!-- HERO -->
+
+  <section class="hero" id="home">
+
+    <div class="hero-content">
+
+      <h1>
+        Experience God's Love Through Worship & Fellowship
+      </h1>
+
+      <p>
+        Join a welcoming family of believers where faith grows,
+        worship inspires, and lives are transformed through
+        the power of God.
+      </p>
+
+      <div class="hero-buttons">
+
+        <a href="#" class="btn-primary">
+          Plan Your Visit
+        </a>
+
+        <a href="#about" class="btn-outline">
+          About Us
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+
+  <section class="about-section reveal" id="about">
+
+    <div class="about-container">
+
+      <div class="about-image">
+
+        <img src="daddy.jpeg"
+        alt="Pastor preaching during worship service">
+
+      </div>
+
+      <div class="about-content">
+
+        <span class="section-tag">
+          ABOUT US
+        </span>
+
+        <h2>
+          A Christ-Centered Church Built On Faith, Worship & Love
+        </h2>
+
+        <p>
+          Cherish Chapel Worldwide is a welcoming Christian ministry
+          dedicated to transforming lives through worship, prayer,
+          biblical teaching, and genuine fellowship.
+        </p>
+
+        <p>
+          We believe in creating an atmosphere where people can
+          encounter God, grow spiritually, and discover their
+          divine purpose in Christ.
+        </p>
+
+        <div class="mission-grid">
+
+          <div class="mission-box">
+
+            <h3>Our Mission</h3>
+
+            <p>
+              To lead people into a deeper relationship with God
+              through worship, prayer, and biblical teaching.
+            </p>
+
+          </div>
+
+          <div class="mission-box">
+
+            <h3>Our Vision</h3>
+
+            <p>
+              To impact lives globally with hope, salvation,
+              and transformation through Jesus Christ.
+            </p>
+
+          </div>
+
+          <div class="mission-box">
+
+            <h3>Our Values</h3>
+
+            <p>
+              Faith, love, unity, excellence, holiness,
+              and service remain our foundation.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- GALLERY -->
+
+  <section class="gallery-section reveal" id="gallery">
+
+    <div class="gallery-title">
+
+      <span class="section-tag">
+        GALLERY
+      </span>
+
+      <h2>
+        Moments Of Worship & Fellowship
+      </h2>
+
+    </div>
+
+    <div class="gallery-grid">
+
+      <img src="four.jpeg" alt="Prayer Session">
+      <img src="one.jpeg" alt="Prayer Session">
+      <img src="three.jpeg" alt="Church Choir">
+      <img src="one.jpeg" alt="Church Members">
+
+    </div>
+
+  </section>
+
+  <!-- SERMONS -->
+
+  <section class="sermons-section reveal" id="sermons">
+
+    <div class="sermons-title">
+
+      <span class="section-tag">
+        SERMONS
+      </span>
+
+      <h2>
+        Latest Messages
+      </h2>
+
+    </div>
+
+    <div class="sermon-grid">
+
+      <div class="sermon-card">
+
+        <img src="sermon 1.jpeg" alt="Sermon"
+        >
+
+        <div class="sermon-content">
+
+          <h3>Walking By Faith</h3>
+
+          <p>
+            Sunday Service •  May 2026
+          </p>
+
+          <a href="#" class="btn-primary">
+            Watch Sermon
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="sermon-card">
+
+        <img src="sermon 2.jpeg" alt="Sermon">
+
+        <div class="sermon-content">
+
+          <h3>The Power Of Prayer</h3>
+
+          <p>
+            Midweek Service •  May 2026
+          </p>
+
+          <a href="#" class="btn-primary">
+            Watch Sermon
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="sermon-card">
+
+        <img src="sermon 3.jpeg" alt="Sermon">
+
+        <div class="sermon-content">
+
+          <h3>Living In Grace</h3>
+
+          <p>
+            Sunday Service •  May 2026
+          </p>
+
+          <a href="#" class="btn-primary">
+            Watch Sermon
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!-- WATCH SECTION -->
+<!-- WATCH SECTION -->
+
+<section class="watch-section" id="watch">
+
+```
+<div class="watch-header">
+    <h1>WATCH</h1>
+    <p>
+        Discover inspiring video content from our playlist — sermons,
+        teachings, and stories to uplift your faith.
+    </p>
+</div>
+
+<div class="watch-container">
+
+    <!-- VIDEO CARD 1 -->
+    <div class="video-card">
+        <div class="video-media">
+            <a href="https://youtube.com/@richarddarkoministries?si=udL7lSIYz5lXyHPj" target="_blank">
+                <img src="online.jpg" alt="Online Streaming">
+            </a>
+        </div>
+
+        <div class="video-content">
+            <h3>
+                WORD OF LIFE WORD OF HOPE
+                <span>with General Richard Darko | Tuesday</span>
+            </h3>
+
+            <div class="video-meta">
+                <span class="tag">WORD OF LIFE</span>
+                <span class="date">Jan 13, 2026</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIDEO CARD 2 (FIXED IFRAME) -->
+    <div class="video-card">
+        <div class="video-media">
+            <iframe 
+                src="https://www.youtube.com/embed/6lTi-MfrCBk"
+                title="YouTube video player"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="video-content">
+            <h3>
+                 Deep Mysteries
+                <span>Time with General Richard Darko | Wednesday</span>
+            </h3>
+
+            <div class="video-meta">
+                <span class="tag">Revelations</span>
+                <span class="date">Apr 8, 2026</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+```
+
+</section>
+
+<!-- ADD / REPLACE THIS CSS -->
+
+<style>
+
+/* FIXED WATCH GRID */
+.watch-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.video-card {
+    background: #1f1f1f;
+    border-radius: 18px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-6px);
+}
+
+/* 🔥 THIS IS THE MAIN FIX */
+.video-media {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* PERFECT 16:9 RATIO */
+    overflow: hidden;
+}
+
+/* IMAGE + IFRAME SAME BEHAVIOR */
+.video-media img,
+.video-media iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border: none;
+    display: block;
+}
+
+/* CONTENT */
+.video-content {
+    padding: 18px;
+}
+
+.video-content h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.video-content h3 span {
+    display: block;
+    font-size: 13px;
+    color: #bbb;
+    font-weight: 400;
+}
+
+/* META */
+.video-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.video-meta .tag {
+    background: var(--secondary);
+    padding: 4px 10px;
+    font-size: 11px;
+    border-radius: 20px;
+}
+
+.video-meta .date {
+    font-size: 12px;
+    color: #aaa;
+}
+
+</style>
+
+
+</section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer" id="footer">
+
+    <h3>
+      Cherish Chapel Worldwide
+    </h3>
+
+    <p>
+      Worship • Faith • Fellowship
+    </p>
+   <!-- CONTACT / SOCIAL SECTION -->
+<section class="contact-social-section">
+  <div class="overlay"></div>
+
+  <div class="contact-container">
+    
+    <!-- LEFT SIDE -->
+    <div class="contact-info">
+      <h3>CONTACT INFO</h3>
+
+      <div class="info-box">
+        <i class="fas fa-user"></i>
+        <p>Cherish Chapel Worldwide</p>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-home"></i>
+        <p>Macarthy Hill, Opposite Benjy's Lodge Accra, Ghana</p>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-phone"></i>
+        <p>+233 279 455 359</p>
+      </div>
+
+      <div class="info-box">
+        <i class="fas fa-link"></i>
+        <p>cherishchapelworldwide@gmail.com</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="social-media">
+      <h3>FIND US ON SOCIAL MEDIA</h3>
+
+      <div class="social-icons">
+        <a href="https://www.tiktok.com/@cherish_572?_r=1&_t=ZN-96NswheuVqY"><i class="fab fa-tiktok"></i></a>
+        <a href="https://www.facebook.com/share/1GbqRLktgm/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/richarddarkoministries?igsh=dW5qNGpndzRsa3Q0&utm_source=qr"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com/@richarddarkoministries?si=onzD_DPZM0DrdlAL"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FONT AWESOME -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <p>
+      © All Rights Reserved
+    </p>
+
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+  <script>
+
+    // MOBILE MENU
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.onclick = () => {
+      nav.classList.toggle('active');
+    };
+
+    // SCROLL REVEAL
+
+    const reveals = document.querySelectorAll('.reveal');
+
+    window.addEventListener('scroll', () => {
+
+      reveals.forEach(reveal => {
+
+        const windowHeight = window.innerHeight;
+        const revealTop = reveal.getBoundingClientRect().top;
+
+        if(revealTop < windowHeight - 100){
+          reveal.classList.add('active');
+        }
+
+      });
+
+    });
+
+  </script>
+
+</body>
+</html>
